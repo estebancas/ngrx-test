@@ -1,0 +1,7 @@
+<p>users!</p>
+
+<div *ngIf="!((users$ | async)?.length)">
+    no users!
+</div>
+<app-user-detail *ngFor="let user of (users$ | async)" [user]="user">
+</app-user-detail>
